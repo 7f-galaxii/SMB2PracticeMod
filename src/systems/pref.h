@@ -103,6 +103,10 @@ enum class Pref : u8 {
     InputDispGradientStart = 90,
     InputDispGradientEnd = 91,
     RgbFormat = 92,
+    QuickResetStory = 93,
+    QuickResetPractice = 94,
+    QuickResetChallenge = 95,
+    QuickResetBind = 96
 };
 
 void init();

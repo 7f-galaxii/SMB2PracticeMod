@@ -1389,6 +1389,48 @@ static Widget s_savestate_widgets[] = {
     },
 };
 
+static Widget s_quick_reset[] = {
+    {
+        .type = WidgetType::Header,
+        .header = {"Enable Quick Reset in..."},
+    },
+    {
+        .type = WidgetType::Checkbox,
+        .checkbox =
+            {
+                .label = "Story Mode",
+                .pref = pref::Pref::QuickResetStory,
+            },
+    },
+    {
+        .type = WidgetType::Checkbox,
+        .checkbox =
+            {
+                .label = "Practice Mode",
+                .pref = pref::Pref::QuickResetPractice,
+            },
+    },
+    {
+        .type = WidgetType::Checkbox,
+        .checkbox =
+            {
+                .label = "Challenge Mode (buggy)",
+                .pref = pref::Pref::QuickResetChallenge,
+            },
+    },
+    {
+        .type = WidgetType::InputSelect,
+        .input_select =
+            {
+                .label = "Quick Reset Bind",
+                .pref = pref::Pref::QuickResetBind,
+                .required_chord = false,
+                .can_unbind = true,
+            },
+    }
+};
+
+
 static Widget s_tools_widgets[] = {
     {
         .type = WidgetType::Button,
@@ -1440,6 +1482,10 @@ static Widget s_tools_widgets[] = {
         .menu = {"Progress Unlock", s_unlock_widgets, LEN(s_unlock_widgets)},
     },
     {
+        .type = WidgetType::Menu,
+        .menu = {"Quick Reset", s_quick_reset, LEN(s_quick_reset)},
+    },
+    {
         .type = WidgetType::Checkbox,
         .checkbox =
             {
@@ -1473,6 +1519,7 @@ static Widget s_reset_ilmark_widgets[] = {
             },
     },
 };
+
 
 static Widget s_il_mark_widgets[] = {
     {

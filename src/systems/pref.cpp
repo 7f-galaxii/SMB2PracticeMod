@@ -99,6 +99,10 @@ static const Pref PREF_IDS[] = {
     Pref::InputDispGradientStart,
     Pref::InputDispGradientEnd,
     Pref::RgbFormat,
+    Pref::QuickResetStory,
+    Pref::QuickResetPractice,
+    Pref::QuickResetChallenge,
+    Pref::QuickResetBind
 };
 
 struct DefaultPref {
@@ -131,6 +135,7 @@ static const DefaultPref DEFAULT_PREFS[] = {
     {Pref::CustomPhysicsDisp, 1},
     {Pref::SavestateClearAllBind, 255},
     {Pref::InputDispGradientEnd, 100},
+    {Pref::QuickResetBind, 255}
 };
 
 //

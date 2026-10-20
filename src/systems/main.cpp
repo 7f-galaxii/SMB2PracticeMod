@@ -31,6 +31,7 @@
 #include "mods/jump.h"
 #include "mods/marathon.h"
 #include "mods/physics.h"
+#include "mods/quickreset.h"
 #include "mods/savest_ui.h"
 #include "mods/scratch.h"
 #include "mods/sfx.h"
@@ -105,6 +106,7 @@ static patch::Tramp<mkb::process_inputs> s_process_inputs_tramp([]() {
     stage_edits::tick();
     validate::tick();
     scratch::tick();
+    quickreset::tick();
     // Pref runs last to track the prefs from the previous frame
     pref::tick();
 });
